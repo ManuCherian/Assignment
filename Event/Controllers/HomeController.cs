@@ -33,11 +33,8 @@ namespace Event.Controllers
         public ActionResult Events()
         {
 
-
+//retrieving data from database
             var events = db.EventDetails.ToList();
-
-            
-
             return View(events);
         }
         public ActionResult ViewEvent(string Event_name)

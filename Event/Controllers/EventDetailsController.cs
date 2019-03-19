@@ -10,10 +10,12 @@ using Event.Models;
 
 namespace Event.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class EventDetailsController : Controller
     {
         private DbModel db = new DbModel();
 
+        [AllowAnonymous]
         // GET: EventDetails
         public ActionResult Index()
         {

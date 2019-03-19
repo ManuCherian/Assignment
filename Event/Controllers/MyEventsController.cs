@@ -10,6 +10,7 @@ using Event.Models;
 
 namespace Event.Controllers
 {
+    [Authorize]
     public class MyEventsController : Controller
     {
         private DbModel db = new DbModel();

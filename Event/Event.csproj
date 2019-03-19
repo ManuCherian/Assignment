@@ -18,7 +18,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44371</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -249,16 +249,16 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Events.cshtml" />
     <Content Include="Views\Home\ViewEvent.cshtml" />
-    <Content Include="Views\MyEvents\Create.cshtml" />
-    <Content Include="Views\MyEvents\Delete.cshtml" />
-    <Content Include="Views\MyEvents\Details.cshtml" />
-    <Content Include="Views\MyEvents\Edit.cshtml" />
-    <Content Include="Views\MyEvents\Index.cshtml" />
     <Content Include="Views\EventDetails\Create.cshtml" />
     <Content Include="Views\EventDetails\Delete.cshtml" />
     <Content Include="Views\EventDetails\Details.cshtml" />
     <Content Include="Views\EventDetails\Edit.cshtml" />
     <Content Include="Views\EventDetails\Index.cshtml" />
+    <Content Include="Views\MyEvents\Create.cshtml" />
+    <Content Include="Views\MyEvents\Delete.cshtml" />
+    <Content Include="Views\MyEvents\Details.cshtml" />
+    <Content Include="Views\MyEvents\Edit.cshtml" />
+    <Content Include="Views\MyEvents\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5,11 +5,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Event Details</h2>
 
+@if (User.IsInRole("Administrator"))
+{
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+}
 <table class="table">
     <tr>
         <th>
@@ -21,7 +24,10 @@
         <th>
             @Html.DisplayNameFor(model => model.Ends)
         </th>
-        <th></th>
+        @if (Request.IsAuthenticated)
+        {
+        <th>Action</th>
+        }
     </tr>
 
 @foreach (var item in Model) {
@@ -35,11 +41,14 @@
         <td>
             @Html.DisplayFor(modelItem => item.Ends)
         </td>
+        @if (User.IsInRole("Administrator"))
+        {
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdNumber }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdNumber }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdNumber })
+            @Html.ActionLink("Edit", "Edit", new { id = item.IdNumber }) ;
+            @Html.ActionLink("Details", "Details", new { id = item.IdNumber }) ;
+            @Html.ActionLink("Delete", "Delete", new { id = item.IdNumber })
         </td>
+        }
     </tr>
 }
 
