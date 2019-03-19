@@ -4,10 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using Event.Models;
+
 namespace Event.Controllers
 {
     public class HomeController : Controller
     {
+        DbModel db = new DbModel();
         public ActionResult Index()
         {
             return View();
@@ -24,6 +27,22 @@ namespace Event.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult Events()
+        {
+
+
+            var events = db.EventDetails.ToList();
+
+            
+
+            return View(events);
+        }
+        public ActionResult ViewEvent(string Event_name)
+        {
+            ViewBag.Event_name = Event_name;
             return View();
         }
     }

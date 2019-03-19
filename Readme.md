@@ -1,4 +1,5 @@
-﻿@{
+<h1>Event </h1>
+@{
     ViewBag.Title = "Home Page";
 }
 
